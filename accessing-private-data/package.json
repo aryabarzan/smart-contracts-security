@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/aryabarzan/reentrancy-attack#readme",
   "devDependencies": {
-    "@nomicfoundation/hardhat-ethers": "^3.0.4",
     "@nomicfoundation/hardhat-toolbox": "^3.0.0",
     "@types/chai": "^4.3.6",
     "@types/mocha": "^10.0.1",
