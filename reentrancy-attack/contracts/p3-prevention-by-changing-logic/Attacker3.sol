@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-import "./MyEtherWallet.sol";
+import "./MyEtherWallet3.sol";
 
-contract Attacker {
+contract Attacker3 {
     uint numberOfEnterance;
     address public owner;
-    MyEtherWallet public myEtherWallet;
+    MyEtherWallet3 public myEtherWallet;
 
-    constructor(MyEtherWallet myEtherWallet_) {
+    constructor(MyEtherWallet3 myEtherWallet_) {
         owner = msg.sender;
         myEtherWallet = myEtherWallet_;
     }

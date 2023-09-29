@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-contract MyEtherWallet {
+contract MyEtherWallet3 {
     mapping(address => uint) public balances;
 
     receive() external payable {
@@ -12,9 +12,8 @@ contract MyEtherWallet {
         uint balance_ = balances[msg.sender];
         require(balance_ <= address(this).balance);
 
+        balances[msg.sender] = 0;
         (bool sent, ) = payable(msg.sender).call{value: balance_}("");
         require(sent, "Failed to send Ether");
-
-        balances[msg.sender] = 0;
     }
 }
